@@ -18,6 +18,7 @@
     "url": "https://github.com/mozilla/Spoke.git"
   },
   "scripts": {
+    "prod": "cross-env NODE_ENV=production HOST_IP=smartexpo.bitallium.com BASE_ASSETS_PATH=https://smartexpo.bitallium.com:9090/ webpack-dev-server --mode production --https --cert /etc/letsencrypt/live/smartexpo.bitallium.com/cert.pem --key /etc/letsencrypt/live/smartexpo.bitallium.com/privkey.pem",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development",
     "start-moz": "cross-env IS_MOZ=true NODE_ENV=development webpack-dev-server --mode development",
     "run-local-reticulum": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 ROUTER_BASE_PATH=/spoke BASE_ASSETS_PATH=https://hubs.local:9090/ HUBS_SERVER=hubs.local:4000 RETICULUM_SERVER=hubs.local:4000 yarn start",
